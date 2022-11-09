@@ -1,0 +1,55 @@
+.container {
+  padding: 51px 41px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .status_icon_otp{
+    margin-bottom: 35px;
+  }
+  .title{ 
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-bottom: 35px;
+    &.fail{
+      color: #DE8181;
+    }
+    &.success{
+      color: #00A663;
+    }
+  }
+  .content{
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    color: #262834;
+    margin-bottom: 35px;
+  }
+  .wrap_button {
+    width: 100%;
+    max-width: 192px;
+    height: 61px;
+    margin-bottom: 39px;
+    .button{ 
+      padding: 0;
+    }
+  }
+  .text_redirect{
+    margin-bottom: 29px;
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+    }
+    .button{
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 18px;
+    }
+  }
+}
