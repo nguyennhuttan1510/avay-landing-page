@@ -36,6 +36,9 @@
   align-items: center;
 }
 .contact {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
   background: linear-gradient(90deg, #10C37B -0.02%, #42B0FF 99.99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

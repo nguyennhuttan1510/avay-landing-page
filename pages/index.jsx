@@ -1,4 +1,7 @@
 import classNames from "classnames"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Head from 'next/head'
 import Image from 'next/image'
 import BaseButton from "../components/Button"
@@ -6,8 +9,24 @@ import RegisterCard from "../components/RegisterCard"
 import RegisterCardImage from "../components/RegisterCard/RegisterCardImage"
 import MainLayout from "../layouts/MainLayout"
 import styles from './Home.module.scss'
+import Slider from "react-slick";
 
 export default function Home() {
+  const settings = {
+    dots: false,
+    rows: 1,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 10000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    variableWidth: true,
+    pauseOnHover: true,
+    nextArrow: <></>,
+    prevArrow: <></>,
+  };
   return (
     <div className={classNames(styles.container) }>
       <div className={classNames(styles.wrap_sections, 'container mx-auto')}>
@@ -18,25 +37,79 @@ export default function Home() {
 
       <div className={styles.wrap_partner}>
         <div className={styles.section_title_brand}>Đối tác đồng hành cùng AVAY</div>
-        <div className={classNames( styles.scroll, styles.wrap_partners)}>
-          <div className={styles.partners}>
-            <div className={classNames(styles.item, 'w-[66px] lg:w-max')}>
-              <Image src="/logos/vib.png" alt='vib' width={135} height={65} />
+        {/* <div className={classNames( styles.scroll, styles.wrap_partners)}> */}
+          {/* <div className={styles.partners}> */}
+          <div className="w-full mx-auto">
+          <Slider {...settings}>
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                  <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                    <Image className='lg:mx-auto' src="/logos/vib.png" alt='vib' width={135} height={65} />
+                  </div>
+                  <div className={styles.divide}></div>
+              </div>
             </div>
-            <span className={styles.divide}></span>
-            <div className={classNames(styles.item, 'w-[120px] lg:w-max')}>
-              <Image src="/logos/vpb.png" alt='vpb' width={238} height={54} />
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  <Image className='lg:mx-auto' src="/logos/vpb.png" alt='vpb' width={238} height={54} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
             </div>
-            <span className={styles.divide}></span>
-            <div className={styles.item}>
-              <Image src="/logos/fe.png" alt='fe' width={299} height={31} />
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  <Image className='lg:mx-auto' src="/logos/fe.png" alt='fe' width={299} height={31} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
             </div>
-            <span className={styles.divide}></span>
-            <div className={styles.item}>
-              <Image src="/logos/mafc.png" alt='mafc' width={239} height={86} />
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  <Image className='lg:mx-auto' src="/logos/mafc.png" alt='mafc' width={239} height={86} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
             </div>
+            
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                  <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                    <Image className='lg:mx-auto' src="/logos/vib.png" alt='vib' width={135} height={65} />
+                  </div>
+                  <div className={styles.divide}></div>
+              </div>
+            </div>
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  <Image className='lg:mx-auto' src="/logos/vpb.png" alt='vpb' width={238} height={54} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
+            </div>
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  <Image className='lg:mx-auto' src="/logos/fe.png" alt='fe' width={299} height={31} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
+            </div>
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  <Image className='lg:mx-auto' src="/logos/mafc.png" alt='mafc' width={239} height={86} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
+            </div>
+          </Slider>
           </div>
-        </div>
+          {/* </div> */}
+        {/* </div> */}
       </div>
 
       <div className={styles.wrap_service}>

@@ -15,7 +15,7 @@ const Header = () => {
       <div className={classNames(styles.back_effect, styles.left)}></div>
       <div className={classNames(styles.back_effect, styles.right)}></div>
       <div className={classNames(styles.container_bg, 'hidden lg:block') }>
-      <div className={classNames(styles.container,'container hidden lg:flex')}>
+      <div className={classNames(styles.container,'container flex')}>
       <div className={styles.leftSite}>
         <span className={styles.logo}>
           <Image src="/logos/logo.png" alt="Logo" width={194} height={60} />
@@ -29,7 +29,10 @@ const Header = () => {
         </div>
         <div className={styles.action}>
           <div className={styles.contact}>
-          Hotline
+            <div>
+              <Image src='/icons/call_icon.svg' alt='call_icon' width={16} height={16} />
+            </div>
+            <div>Hotline</div>
           </div>
           <BaseButton className='success'>Đăng ký</BaseButton>
         </div>
@@ -43,7 +46,10 @@ const Header = () => {
         <div className={styles.item}>Quy trình</div>
         <div className={styles.item}>Blog</div>
         <div className={classNames(styles.contact, styles.contact_mobile)}>
-          Hotline
+          <div>
+            <Image src='/icons/call_icon.svg' alt='call_icon' width={16} height={16} />
+          </div>
+          <div>Hotline</div>
           </div>
         <div className={styles.wrap_button}>
           <BaseButton className={classNames('success', styles.button)}>Đăng ký</BaseButton>
