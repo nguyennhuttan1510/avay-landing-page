@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import Image from "next/image";
 import React, { useState } from 'react';
+import Slider from "react-slick";
 import BaseButton from "../../../components/Button";
 import styles from './styles.module.scss'
 const Header = () => {
@@ -8,13 +9,26 @@ const Header = () => {
   const handleOpenMenuMobile = () => {
     setOpenMenuMobile(prev => !prev)
   }
+
+  const settingsBanner = {
+    dots: true,
+    rows: 1,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    // dotsClass: 'slick-dots-custom',
+    autoplaySpeed: 5000,
+    nextArrow: <></>,
+    prevArrow: <></>,
+  };
+
   return (
     <div className={classNames(styles.wrap_banner)}>
-    
-
       <div className={classNames(styles.back_effect, styles.left)}></div>
       <div className={classNames(styles.back_effect, styles.right)}></div>
-      <div className={classNames(styles.container_bg, 'hidden lg:block') }>
+      <div className={classNames(styles.container_bg) }>
       <div className={classNames(styles.container,'container flex')}>
       <div className={styles.leftSite}>
         <span className={styles.logo}>
@@ -57,15 +71,52 @@ const Header = () => {
       </div>
     </div>
       <div className="container mx-auto">
-      <div className={classNames(styles.banner)}>
-        <div className={classNames(styles.banner_content)}>
-          <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
-          <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
+    <Slider {...settingsBanner}>
+      <div>
+        <div className={classNames(styles.banner)}>
+          <div className={classNames(styles.banner_content)}>
+            <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
+            <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
+          </div>
+          <div className={classNames(styles.images, 'order-first lg:order-last')}>
+            <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
+          </div>
         </div>
-        <div className={classNames(styles.images, 'order-first lg:order-last')}>
-          <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
+      </div>
+      <div>
+        <div className={classNames(styles.banner)}>
+          <div className={classNames(styles.banner_content)}>
+            <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
+            <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
+          </div>
+          <div className={classNames(styles.images, 'order-first lg:order-last')}>
+            <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
+          </div>
         </div>
-    </div>
+      </div>
+      <div>
+        <div className={classNames(styles.banner)}>
+          <div className={classNames(styles.banner_content)}>
+            <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
+            <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
+          </div>
+          <div className={classNames(styles.images, 'order-first lg:order-last')}>
+            <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className={classNames(styles.banner)}>
+          <div className={classNames(styles.banner_content)}>
+            <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
+            <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
+          </div>
+          <div className={classNames(styles.images, 'order-first lg:order-last')}>
+            <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
+          </div>
+        </div>
+      </div>
+      </Slider>
       </div>
     </div>
   );

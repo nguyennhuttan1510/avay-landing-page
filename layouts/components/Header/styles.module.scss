@@ -1,4 +1,5 @@
 .container_bg {
+  display: none;
   background-color: white;
   z-index: 40;
   position: relative;
@@ -101,6 +102,7 @@
       .sub {
         text-align: center;
         font-weight: 400;
+        font-family: 'Roboto', sans-serif;
         text-align: center;
         font-size: 17px;
         line-height: 20px;
@@ -170,7 +172,16 @@
 }
 
 
+.slick-dot-custom {
+  .slick-active {
+    color: #10C37B;
+  }
+}
+
 @media (min-width: 1024px) {
+  .container_bg {
+    display: block;
+  }
   .wrap_banner {
     height: 603px;
     background: linear-gradient(180deg, rgba(229, 244, 240, 0.51) 0%, rgba(229, 244, 240, 0.61) 100%);
