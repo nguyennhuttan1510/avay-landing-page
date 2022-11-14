@@ -78,7 +78,7 @@ const Header = () => {
             <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
             <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
           </div>
-          <div className={classNames(styles.images, 'order-first lg:order-last')}>
+          <div className={classNames(styles.images, 'order-first xl:order-last')}>
             <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
           </div>
         </div>
@@ -89,7 +89,7 @@ const Header = () => {
             <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
             <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
           </div>
-          <div className={classNames(styles.images, 'order-first lg:order-last')}>
+          <div className={classNames(styles.images, 'order-first xl:order-last')}>
             <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
           </div>
         </div>
@@ -100,7 +100,7 @@ const Header = () => {
             <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
             <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
           </div>
-          <div className={classNames(styles.images, 'order-first lg:order-last')}>
+          <div className={classNames(styles.images, 'order-first xl:order-last')}>
             <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
           </div>
         </div>
@@ -111,7 +111,7 @@ const Header = () => {
             <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
             <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
           </div>
-          <div className={classNames(styles.images, 'order-first lg:order-last')}>
+          <div className={classNames(styles.images, 'order-first xl:order-last')}>
             <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
           </div>
         </div>

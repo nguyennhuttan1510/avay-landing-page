@@ -29,7 +29,7 @@ input{
   }
 }
 .selection{
-  min-width: 200px;
+  // min-width: 200px;
   position: relative;
   .wrap_option{
     position: absolute;
@@ -51,4 +51,20 @@ input{
 
 .slick-dots li button:before{
   color: #10C37B !important;
+}
+.slick-dots li {
+  &.slick-active{
+    transform: scale(2);
+  }
+}
+.slick-dots {
+  height: auto;
+  display: none !important;
+}
+
+@media (min-width: 1280px) {
+  .slick-dots {
+    height: 42px;
+    display: block !important;
+  }
 }

@@ -18,8 +18,8 @@ const SelectField = ({
   }
   return (  
     <div className='selection'>
-    <div className='field_input h-[24px]' onClick={()=>{setOpen(prev => !prev)}}>
-      <div className='flex justify-between gap-x-2'><div  className={className}>{currentOption?.title }</div><div><Image src='/icons/dropdown_icon.svg' alt='icon' width={12} height={6} /></div></div>
+    <div className='field_input' onClick={()=>{setOpen(prev => !prev)}}>
+      <div className='flex justify-between gap-x-2 items-center h-[24px]'><div  className={className}>{currentOption?.title }</div><div><Image src='/icons/dropdown_icon.svg' alt='icon' width={12} height={6} /></div></div>
     </div>
     <div className={classNames('flex flex-col wrap_option z-50',{'hidden': !open})}>
       {options.map(option => (

@@ -102,7 +102,15 @@
     .wrap_card{
       .body_card {
         row-gap: 40px;
-        
+        .input_field{
+          .input {
+            font-size: 24px;
+          }
+          .label{
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
       }
     }
   }

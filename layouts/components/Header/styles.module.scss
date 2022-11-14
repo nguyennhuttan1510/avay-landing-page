@@ -91,7 +91,7 @@
       .title {
         text-align: center;
         color: #0A0D28;
-        font-weight: 700;
+        font-weight: bolder;
         font-size: 26px;
         line-height: 40px;
         letter-spacing: -1.58417px;
@@ -178,7 +178,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .container_bg {
     display: block;
   }
@@ -205,7 +205,7 @@
       .banner_content {
         align-items: flex-start;
         order: 1;
-        row-gap: 42px;
+        row-gap: 12px;
         .title {
           // width: max-content;
           text-align: left;

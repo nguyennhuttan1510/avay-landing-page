@@ -128,7 +128,7 @@ export default function Home() {
         <div className={styles.back_effect_process_2}></div>
         <div style={{marginBottom:'80px'}} className={classNames(styles.section_title, styles.section_title_process)}>
           <div className={styles.title_section_service}><span>Quy trình</span></div>
-          <div style={{marginBottom:'21px'}} className={styles.title}>Chỉ 3 bước để<br/> đăng ký khoản vay</div>
+          <div style={{marginBottom:'21px'}} className={styles.title}>Chỉ 3 bước để<br className="lg:hidden"/> đăng ký khoản vay</div>
           <div className={styles.sub}>Chỉ cần thực hiện các thao tác đơn giản sau là bạn đã đăng ký thành công</div>
         </div>
         <div className={styles.processes}>
@@ -137,8 +137,8 @@ export default function Home() {
               <Image src='/images/process_1.png' alt='process_1' width={120} height={120} />
             </div>
             <div className={styles.process_content}>
-              <div className={styles.title}>Điển thông tin vay</div>
-              <div style={{padding: '0 7px'}} className={styles.sub}>Cung cấp các thông tin cơ bản để AVAY có thể tìm được sản phẩm vay phù hợp nhất với bạn.</div>
+              <div className={styles.title}>Điền thông tin vay</div>
+              <div className={styles.sub}>Cung cấp các thông tin cơ bản để AVAY có thể tìm được sản phẩm vay phù hợp nhất với bạn.</div>
             </div>
           </div>
           <div className={classNames(styles.process_item, styles.fluid)}>
@@ -147,7 +147,7 @@ export default function Home() {
             </div>
             <div className={styles.process_content}>
               <div className={styles.title}>Nhận kết quả online</div>
-              <div style={{margin: '0 -12px'}} className={styles.sub}>Với công nghệ độc quyền, hệ thống tự động đánh giá và phân tích hồ sơ để tìm khoản vay phù hợp chỉ sau 2 phút.</div>
+              <div className={styles.sub}>Với công nghệ độc quyền, hệ thống tự động đánh giá và phân tích hồ sơ để tìm khoản vay phù hợp chỉ sau 2 phút.</div>
             </div>
           </div>
           <div className={styles.process_item}>
@@ -156,12 +156,12 @@ export default function Home() {
             </div>
             <div className={styles.process_content}>
               <div className={styles.title}>Nhân viên liên hệ</div>
-              <div style={{margin: '0 -12px'}} className={styles.sub}>Chúc mừng bạn đã đăng ký vay thành công tại AVAY. Vui lòng đợi để được liên hệ giải ngân.</div>
+              <div className={styles.sub}>Chúc mừng bạn đã đăng ký vay thành công tại AVAY. Vui lòng đợi để được liên hệ giải ngân.</div>
             </div>
           </div>
         </div>
         <div className={styles.wrap_button_process}>
-          <BaseButton className="success">Đăng ký ngay</BaseButton>
+          <BaseButton className="shadow shadow--success lg:max-w-full lg:mx-auto lg:h-20 h-[58px]">Đăng ký ngay</BaseButton>
         </div>
       </div>
 
@@ -173,15 +173,15 @@ export default function Home() {
             </div>
             <span className={styles.divide}></span>
             <div className={styles.logo_item}>
+              <Image src="/logos/tiepthi.png" alt='tiepthi' width={200} height={78} />
+            </div>
+            <span className={styles.divide}></span>
+            <div className={styles.logo_item}>
               <Image src="/logos/cafe_biz.png" alt='cafebiz' width={191} height={56} />
             </div>
             <span className={styles.divide}></span>
             <div className={styles.logo_item}>
               <Image src="/logos/vietnam_net.png" alt='vietnam_net' width={168} height={86} />
-            </div>
-            <span className={styles.divide}></span>
-            <div className={styles.logo_item}>
-              <Image src="/logos/tiepthi.png" alt='tiepthi' width={200} height={78} />
             </div>
           </div>
       </div>
