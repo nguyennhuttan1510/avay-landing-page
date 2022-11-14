@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import './mixin.scss';
-// @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans&family=Roboto&display=swap');
 html,
@@ -30,7 +29,6 @@ input{
   }
 }
 .selection{
-  // min-width: 200px;
   position: relative;
   .wrap_option{
     position: absolute;

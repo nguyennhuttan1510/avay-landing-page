@@ -18,25 +18,25 @@ Trụ sở: Tầng 8, Toà nhà Havana, 132 Hàm Nghi, phường Bến Thành, Q
       <div className={styles.menuFooter}>
         <div className={styles.menu_item}>
           <div className={styles.menu_icon}>
-            <Image src="/logos/Document.png" alt="menu_icon" width={20} height={20} />
+            <Image src="/icons/document_2.svg" alt="menu_icon" width={20} height={20} />
           </div>
           <div>Giới thiệu</div>
         </div>
         <div className={styles.menu_item}>
           <div className={styles.menu_icon}>
-            <Image src="/logos/Chat.png" alt="menu_icon" width={20} height={20} />
+            <Image src="/icons/question_2.svg" alt="menu_icon" width={20} height={20} />
           </div>
           <div>Hỏi đáp</div>
         </div>
         <div className={styles.menu_item}>
           <div className={styles.menu_icon}>
-            <Image src="/logos/Message.png" alt="menu_icon" width={20} height={20} />
+            <Image src="/icons/phone_2.svg" alt="menu_icon" width={20} height={20} />
           </div>
           <div>Liên hệ</div>
         </div>
         <div className={styles.menu_item}>
           <div className={styles.menu_icon}>
-            <Image src="/logos/Edit_Square.png" alt="menu_icon" width={20} height={20} />
+            <Image src="/icons/wifi_2.svg" alt="menu_icon" width={20} height={20} />
           </div>
           <div>Blog</div>
         </div>
