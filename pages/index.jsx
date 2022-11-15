@@ -117,7 +117,7 @@ export default function Home() {
         <div className={classNames(styles.scroll, styles.service_scroll)}>
           <div className={styles.services}>
             <RegisterCardImage image={<Image src="/images/image_card_1.png" alt="card_register" width={382} height={355}/>} title='Khoản vay tốt nhất từ ngân hàng và tổ chức uy tín' sub='Cơ hội nhận ngay khoản vay siêu hời với lãi suất hấp dẫn chỉ từ 1.2%/tháng. Bạn sẽ được kết nối tới các gói vay tốt nhất đến từ những đối tác uy tín của AVAY'/>
-            <RegisterCardImage imageRight image={<Image src="/images/image_card_2.png" alt="card_register" width={391} height={456}/>} title='Chỉ với số điện thoại và CMND/CCCD' sub='Chẳng ngại khó vì vay tại AVAY thật đơn giản và dễ dàng. Nhập ngay số điện thoại và CMND/CCCD để được vay không cần phải chứng minh thu nhập.'/>
+            <RegisterCardImage imageRight image={<Image src="/images/image_card_2.1.png" alt="card_register" width={391} height={456}/>} title='Chỉ với số điện thoại và CMND/CCCD' sub='Chẳng ngại khó vì vay tại AVAY thật đơn giản và dễ dàng. Nhập ngay số điện thoại và CMND/CCCD để được vay không cần phải chứng minh thu nhập.'/>
             <RegisterCardImage image={<Image src="/images/image_card_3.png" alt="card_register" width={395} height={473}/>} title='Duyệt vay online chỉ trong 2 phút' sub='Hệ thống duyệt vay thông minh chỉ 2 phút. AVAY cam kết quy trình vay là hoàn toàn miễn phí và không thu thêm bất cứ chi phí nào. '/>
           </div>
         </div>
