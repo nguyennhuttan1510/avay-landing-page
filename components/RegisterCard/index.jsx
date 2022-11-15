@@ -4,10 +4,7 @@ import React, { useState } from 'react';
 import BaseButton from "../Button";
 import SelectField from "../SelectField";
 import styles from './styles.module.scss'
-
-const handleSelect = () => {
-
-}
+import InputMask from 'react-input-mask';
 
 const mockupOption = [
   {title:'10 triệu đồng', value:10000000},
@@ -30,6 +27,8 @@ const RegisterCard = () => {
   const [value, setValue] = useState({
     month: null,
     amount: null,
+    phone: null,
+    identify: null
   })
 
   const handleSetValue = (data) => {
@@ -54,13 +53,17 @@ const RegisterCard = () => {
           <div className="w-full xl:w-[30%]">
             <div className={classNames(styles.input_field)}>
               <div className={styles.label}>Số điện thoại</div>
-              <input className={styles.input} type='text' />
+              <InputMask mask="9999 999 999" value={value.phone} maskChar=" " onChange={(e)=>{setValue(prev => ({...prev, phone: e.target.value}))}}>
+                {(inputProps) =>  <input {...inputProps} className={styles.input} type="tel" disableUnderline />}
+              </InputMask>
             </div>
           </div>
           <div className="w-full  xl:w-[30%] ">
             <div className={classNames(styles.input_field)}>
               <div className={styles.label}>Số  CMND / CCCD</div>
-              <input className={styles.input} type='text' />
+              <InputMask mask="999 999 999 999" value={value.identify} maskChar=" " onChange={(e)=>{setValue(prev => ({...prev, identify: e.target.value}))}}>
+                {(inputProps) =>  <input {...inputProps} className={styles.input} type="text" disableUnderline min={9} max={12} />}
+              </InputMask>
             </div>
           </div>
           <div className="w-full  xl:w-[40%] xl:order-first">
@@ -89,7 +92,7 @@ const RegisterCard = () => {
           </div>
           <div className="h-[55px] mt-[15px] mb-[16px] xl:m-0 xl:w-[30%] xl:h-full">
             <Link href={'/OTP'}>
-              <BaseButton className='success'>ĐĂNG KÝ</BaseButton>
+              <BaseButton style={{fontSize: '26px', lineHeight: '30px'}} className='success'>ĐĂNG KÝ</BaseButton>
             </Link>
           </div>
           </div>

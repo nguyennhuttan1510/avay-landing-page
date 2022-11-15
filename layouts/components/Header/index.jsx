@@ -39,7 +39,7 @@ const Header = () => {
         <div className={styles.menu}>
           <div className={styles.menu_item}>Về Avay</div>
           <div className={styles.menu_item}>Quy trình</div>
-          <div className={styles.menu_item}>Về Avay</div>
+          <div className={styles.menu_item}>Blog</div>
         </div>
         <div className={styles.action}>
           <div className={styles.contact}>

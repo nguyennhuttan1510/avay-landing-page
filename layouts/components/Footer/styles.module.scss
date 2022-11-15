@@ -68,7 +68,7 @@
     align-items: center;
     color: #8A94A6;
     background: #0A0D28;
-    margin-top: -90px;
+    margin-top: -320px;
     .infoText {
       text-align: center;
       max-width: 808px;
@@ -88,5 +88,11 @@
       font-size: 16px;
       line-height: 22px;
     }
+  }
+}
+
+@media (min-width: 1280px) {
+  .container{
+    margin-top: -90px;
   }
 }

@@ -63,6 +63,24 @@
   background: #FFFFFF;
   border-radius: 30px;
   display: flex;
+  justify-content: flex-end;
+  &:first-child {
+    >div:first-child{
+      padding-top: 42px;
+    }
+  }
+  &:not(:first-child){
+    >div:first-child{
+      width: 300px;
+      margin: 0 auto;
+      margin-bottom: auto;
+    }
+  }
+  &:last-child {
+    >div:first-child{
+      width: 335px;
+    }
+  }
   flex-direction: column;
   width: calc( 100vw - 16px );
   padding: 0 10.5px 54px;
@@ -133,6 +151,22 @@
       justify-content: flex-start;
       .title, .content{
         text-align: left;
+      }
+    }
+    &:first-child {
+      >div:first-child{
+        padding-top: 0px;
+      }
+    }
+    &:not(:first-child){
+      >div:first-child{
+        width: unset;
+        margin: unset;
+      }
+    }
+    &:last-child {
+      >div:first-child{
+        width: unset;
       }
     }
   }

@@ -161,7 +161,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.wrap_button_process}>
-          <BaseButton className="shadow shadow--success lg:max-w-full lg:mx-auto lg:h-20 h-[58px]">Đăng ký ngay</BaseButton>
+          <BaseButton className={classNames('shadow shadow--success lg:max-w-full lg:mx-auto lg:h-20 h-[58px]', styles.button)}>Đăng ký ngay</BaseButton>
         </div>
       </div>
 
