@@ -65,29 +65,25 @@
   background: #FFFFFF;
   border-radius: 30px;
   display: flex;
-  // justify-content: flex-end;
-  >div{
-    height: 350px;
-  }
-  &.desktop {
-    &:first-child {
-      >div:first-child{
-        padding-top: 42px;
-      }
-    }
-    &:not(:first-child){
-      >div:first-child{
-        width: 300px;
-        margin: 0 auto;
-        // margin-bottom: auto;
-      }
-    }
-    &:last-child {
-      >div:first-child{
-        width: 335px;
-      }
-    }
-  }
+  // &.desktop {
+  //   &:first-child {
+  //     >div:first-child{
+  //       padding-top: 42px;
+  //     }
+  //   }
+  //   &:not(:first-child){
+  //     >div:first-child{
+  //       width: 300px;
+  //       margin: 0 auto;
+  //       // margin-bottom: auto;
+  //     }
+  //   }
+  //   &:last-child {
+  //     >div:first-child{
+  //       width: 335px;
+  //     }
+  //   }
+  // }
   flex-direction: column;
   width: calc( 100vw - 16px );
   padding: 0 10.5px 54px;
@@ -104,7 +100,7 @@
       line-height: 45px;
     }
     .content{
-      margin-top: auto;
+      // margin-top: auto;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       font-size: 20px;
@@ -163,27 +159,27 @@
         text-align: left;
       }
       .content {
-        margin-top: unset;
+        // margin-top: unset;
       }
     }
-    &.desktop {
-      &:first-child {
-        >div:first-child{
-          padding-top: 0px;
-        }
-      }
-      &:not(:first-child){
-        >div:first-child{
-          // width: unset;
-          margin: unset;
-        }
-      }
-      &:last-child {
-        >div:first-child{
-          width: unset;
-        }
-      }
-    }
+    // &.desktop {
+    //   &:first-child {
+    //     >div:first-child{
+    //       padding-top: 0px;
+    //     }
+    //   }
+    //   &:not(:first-child){
+    //     >div:first-child{
+    //       // width: unset;
+    //       margin: unset;
+    //     }
+    //   }
+    //   &:last-child {
+    //     >div:first-child{
+    //       width: unset;
+    //     }
+    //   }
+    // }
   }
 }
 
