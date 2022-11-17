@@ -4,10 +4,10 @@ import React from 'react';
 import BaseButton from "../Button";
 import styles from './styles.module.scss'
 const RegisterCardImage = (props) => {
-  const {imageRight=false, title, sub, image} = props
+  const {imageRight=false, title, sub, image, classNameImages, classNameRoot} = props
   return (
-      <div className={styles.register_card_image}>
-      <div className={classNames({[styles.image_right]: imageRight} )}>
+      <div className={classNames(styles.register_card_image, classNameRoot,'h-[751px] lg:h-auto')}>
+      <div className={classNames(classNameImages,{[styles.image_right]: imageRight} )}>
         {image || (
           <Image src="/images/image_card_1.png" alt="card_register" width={382} height={355}/>
         )}

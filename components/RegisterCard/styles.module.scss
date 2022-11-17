@@ -11,8 +11,8 @@
       width: 100%;
     }
     .body_card {
-      display: flex;
-      flex-wrap: wrap;
+      // display: flex;
+      // flex-wrap: wrap;
       // flex-direction: column;
       row-gap: 8px;
       .input_field {
@@ -59,6 +59,8 @@
 }
 
 .register_card_image {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 374px;
   background: #FFFFFF;
   border-radius: 30px;
@@ -67,21 +69,23 @@
   >div{
     height: 350px;
   }
-  &:first-child {
-    >div:first-child{
-      padding-top: 42px;
+  &.desktop {
+    &:first-child {
+      >div:first-child{
+        padding-top: 42px;
+      }
     }
-  }
-  &:not(:first-child){
-    >div:first-child{
-      width: 300px;
-      margin: 0 auto;
-      // margin-bottom: auto;
+    &:not(:first-child){
+      >div:first-child{
+        width: 300px;
+        margin: 0 auto;
+        // margin-bottom: auto;
+      }
     }
-  }
-  &:last-child {
-    >div:first-child{
-      width: 335px;
+    &:last-child {
+      >div:first-child{
+        width: 335px;
+      }
     }
   }
   flex-direction: column;
@@ -100,6 +104,7 @@
       line-height: 45px;
     }
     .content{
+      margin-top: auto;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       font-size: 20px;
@@ -109,7 +114,6 @@
       opacity: 0.5;
     }
     .action {
-      margin-top: auto;
       display: flex;
       width: fit-content;
       align-items: center;
@@ -124,12 +128,13 @@
   .container{
     .wrap_card{
       .body_card {
-        row-gap: 40px;
+        // row-gap: 40px;
         .input_field{
           .input {
             font-size: 24px;
           }
           .label{
+            margin-bottom: 10px;
             font-size: 18px;
             line-height: 22px;
           }
@@ -157,21 +162,26 @@
       .title, .content{
         text-align: left;
       }
-    }
-    &:first-child {
-      >div:first-child{
-        padding-top: 0px;
+      .content {
+        margin-top: unset;
       }
     }
-    &:not(:first-child){
-      >div:first-child{
-        // width: unset;
-        margin: unset;
+    &.desktop {
+      &:first-child {
+        >div:first-child{
+          padding-top: 0px;
+        }
       }
-    }
-    &:last-child {
-      >div:first-child{
-        width: unset;
+      &:not(:first-child){
+        >div:first-child{
+          // width: unset;
+          margin: unset;
+        }
+      }
+      &:last-child {
+        >div:first-child{
+          width: unset;
+        }
       }
     }
   }

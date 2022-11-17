@@ -74,6 +74,34 @@
 					width: max-content;
 					flex-wrap: nowrap;
 					column-gap: 8px;
+					.slick-slide {
+						.card_1 {
+							.register_card_image{ 
+								>div{
+									height: 350px;
+								}
+								>div:first-child{
+									padding-top: 42px;
+								}
+							}
+						}
+						.card_2 {
+							.register_card_image {
+								>div:first-child{
+									width: 300px;
+									margin: 0 auto;
+									// margin-bottom: auto;
+								}
+							}
+						}
+						.card_3 {
+							.register_card_image{
+								>div:first-child{
+									width: 335px;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
