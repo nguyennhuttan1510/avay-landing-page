@@ -75,16 +75,16 @@ const RegisterCard = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap mb-2 xl:mb-10 xl:-mx-5">
+          <div className="flex items-center flex-wrap mb-2 xl:mb-10 xl:-mx-5">
             <div className="w-full mb-2 xl:w-[40%] xl:px-5 xl:mb-0">
               <div className="flex items-center">
-                <div className="w-1/2 xl:w-1/3">
+                <div className="w-1/2 xl:w-2/5">
                   <div className={classNames(styles.input_field, styles.no_bg)}>
                     <div className={styles.label}>Lãi suất tháng</div>
                     <div className="text-[#0A0D28] font-semibold text-xl">1.2 - 3%</div>
                   </div>
                 </div>
-                <div className="w-1/2 xl:w-2/3 ">
+                <div className="w-1/2 xl:w-3/5 ">
                   <div className={classNames(styles.input_field,'h-[62px] xl:h-[85px]')}>
                     <div className={styles.label}>Kỳ hạn vay (Tháng)</div>
                     <SelectField onChange={(data) => {handleSetValue({...data, name: 'month'})}} options={mockupOptionMonth} className="text-xl font-semibold"/>
@@ -99,7 +99,7 @@ const RegisterCard = () => {
               </div>
             </div>
             <div className="w-full mb-2 xl:w-[30%] xl:px-5 xl:mb-0">
-              <div className="h-[55px] mt-[15px] mb-[16px] xl:m-0 xl:h-full">
+              <div className="h-[55px] mt-[15px] mb-[16px] xl:m-0 xl:h-[85px]">
                 <Link href={'/OTP'}>
                   <BaseButton style={{fontSize: '26px', lineHeight: '30px'}} className='success'>ĐĂNG KÝ</BaseButton>
                 </Link>

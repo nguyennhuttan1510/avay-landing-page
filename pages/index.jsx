@@ -32,15 +32,16 @@ export default function Home() {
     dots: false,
     rows: 1,
     // infinite: true,
+    variableWidth: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    speed: 1000,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    // autoplay: false,
+    // speed: 1000,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
     // variableWidth: true,
-    // nextArrow: <div className="absolute top-1/2 bg-slate-900">icon</div>,
-    // prevArrow: <>icon</>,
+    nextArrow: <></>,
+    prevArrow: <></>,
   };  
   const [width, setWidth] = useState();
 
@@ -145,13 +146,13 @@ export default function Home() {
         {isMobile ? (
           <div className={styles.services}>
             <Slider {...settingsCartImage}>
-              <div className="card_1">
+              <div className="card_1 px-1 sm:px-4">
                 <RegisterCardImage classNameImages='pt-[42px] h-[350px]' image={<Image src="/images/image_card_1.png" alt="card_register" width={382} height={355}/>} title='Khoản vay tốt nhất từ ngân hàng và tổ chức uy tín' sub='Cơ hội nhận ngay khoản vay siêu hời với lãi suất hấp dẫn chỉ từ 1.2%/tháng. Bạn sẽ được kết nối tới các gói vay tốt nhất đến từ những đối tác uy tín của AVAY'/>
               </div>
-              <div className="card_2">
+              <div className="card_2 px-1 sm:px-4">
                 <RegisterCardImage classNameImages='w-[300px] pt-0 mx-auto h-[350px]' imageRight image={<Image src="/images/image_card_2.1.png" alt="card_register" width={391} height={456}/>} title='Chỉ với số điện thoại và CMND/CCCD' sub='Chẳng ngại khó vì vay tại AVAY thật đơn giản và dễ dàng. Nhập ngay số điện thoại và CMND/CCCD để được vay không cần phải chứng minh thu nhập.'/>
               </div>
-              <div className="card_3">
+              <div className="card_3 px-1 sm:px-4">
                 <RegisterCardImage classNameImages='w-[335px] pt-0 mx-auto h-[350px]' image={<Image src="/images/image_card_3.png" alt="card_register" width={395} height={473}/>} title='Duyệt vay online chỉ trong 2 phút' sub='Hệ thống duyệt vay thông minh chỉ 2 phút. AVAY cam kết quy trình vay là hoàn toàn miễn phí và không thu thêm bất cứ chi phí nào. '/>
               </div>
             </Slider>
