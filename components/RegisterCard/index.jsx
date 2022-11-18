@@ -95,7 +95,8 @@ const RegisterCard = () => {
             <div className="w-full mb-2 xl:w-[30%] xl:px-5 xl:mb-0">
               <div className={classNames(styles.input_field, styles.input_bg, 'h-[62px] xl:h-[85px] ')}>
                 <div className={styles.label}>Số tiền phải trả hàng tháng</div>
-                <input className={classNames(styles.input, styles.primary_color)} type='text' disabled value={total}/>
+                <div className={classNames(styles.input, styles.primary_color)}>{total}</div>
+                {/* <input className={classNames(styles.input, styles.primary_color)} type='text' value={total}/> */}
               </div>
             </div>
             <div className="w-full mb-2 xl:w-[30%] xl:px-5 xl:mb-0">
