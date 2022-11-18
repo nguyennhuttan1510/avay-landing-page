@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Link from "next/link";
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import BaseButton from "../Button";
 import SelectField from "../SelectField";
 import styles from './styles.module.scss'
@@ -31,6 +31,20 @@ const RegisterCard = () => {
     identify: null
   })
 
+  const ref = useRef(null)
+  const ref2 = useRef(null)
+  const input = ref.current;
+  const input2 = ref2.current;
+  // useEffect(() => {
+  //   input.setSelectionRange(0, 0);
+  //   // input.focus();
+  // });
+
+ const handleChange = (e) => {
+    // setCursor(e.target.selectionStart);
+ };
+
+
   const handleSetValue = (data) => {
     setValue(prev => ({
       ...prev, [data.name]: data.value
@@ -55,7 +69,7 @@ const RegisterCard = () => {
                 <div className={classNames(styles.input_field, 'h-[62px] xl:h-[85px] ')}>
                 <div className={styles.label}>Số điện thoại</div>
                 <InputMask mask="9999 999 999" value={value.phone} maskChar=" " onChange={(e)=>{setValue(prev => ({...prev, phone: e.target.value}))}}>
-                  {(inputProps) =>  <input {...inputProps} className={styles.input} type="tel" disableUnderline />}
+                  {(inputProps) =>  <input {...inputProps} ref={ref} className={styles.input} type="tel" disableUnderline onClick={()=>{input.setSelectionRange(0, 0)}} />}
                 </InputMask>
               </div>
             </div>
@@ -63,7 +77,7 @@ const RegisterCard = () => {
                 <div className={classNames(styles.input_field, 'h-[62px] xl:h-[85px] ')}>
                 <div className={styles.label}>Số  CMND / CCCD</div>
                 <InputMask mask="999 999 999 999" value={value.identify} maskChar=" " onChange={(e)=>{setValue(prev => ({...prev, identify: e.target.value}))}}>
-                  {(inputProps) =>  <input {...inputProps} className={styles.input} type="tel" disableUnderline min={9} max={12} />}
+                  {(inputProps) =>  <input {...inputProps} ref={ref2} className={styles.input} type="tel" disableUnderline min={9} max={12} onClick={(e)=>{input2.setSelectionRange(0, 0);}} />}
                 </InputMask>
               </div>
             </div>
@@ -96,7 +110,6 @@ const RegisterCard = () => {
               <div className={classNames(styles.input_field, styles.input_bg, 'h-[62px] xl:h-[85px] ')}>
                 <div className={styles.label}>Số tiền phải trả hàng tháng</div>
                 <div className={classNames(styles.input, styles.primary_color)}>{total}</div>
-                {/* <input className={classNames(styles.input, styles.primary_color)} type='text' value={total}/> */}
               </div>
             </div>
             <div className="w-full mb-2 xl:w-[30%] xl:px-5 xl:mb-0">

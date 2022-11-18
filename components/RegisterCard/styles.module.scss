@@ -58,7 +58,7 @@
 .register_card_image {
   margin-left: auto;
   margin-right: auto;
-  max-width: 374px;
+  max-width: 364px;
   background: #FFFFFF;
   border-radius: 30px;
   display: flex;
@@ -78,7 +78,6 @@
       line-height: 45px;
     }
     .content{
-      margin-top: auto;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       font-size: 20px;
@@ -88,6 +87,7 @@
       opacity: 0.5;
     }
     .action {
+      margin-top: auto;
       display: flex;
       width: fit-content;
       align-items: center;
@@ -139,7 +139,7 @@
       .title {
         font-size: 30px;
       }
-      .content {
+      .action {
         margin-top: unset;
       }
     }
