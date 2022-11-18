@@ -92,7 +92,7 @@
         text-align: center;
         color: #0A0D28;
         font-weight: bolder;
-        font-size: 26px;
+        font-size: 22px;
         line-height: 40px;
         letter-spacing: -1.58417px;
       }
@@ -229,6 +229,19 @@
     }
     .menu_mobile{
       display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap_banner{
+    .banner{
+      .banner_content{
+        .title{ 
+          font-size: 26px;
+          width: max-content;
+        }
+      }
     }
   }
 }

@@ -63,7 +63,7 @@ const RegisterCard = () => {
                 <div className={classNames(styles.input_field, 'h-[62px] xl:h-[85px] ')}>
                 <div className={styles.label}>Số  CMND / CCCD</div>
                 <InputMask mask="999 999 999 999" value={value.identify} maskChar=" " onChange={(e)=>{setValue(prev => ({...prev, identify: e.target.value}))}}>
-                  {(inputProps) =>  <input {...inputProps} className={styles.input} type="text" disableUnderline min={9} max={12} />}
+                  {(inputProps) =>  <input {...inputProps} className={styles.input} type="tel" disableUnderline min={9} max={12} />}
                 </InputMask>
               </div>
             </div>
