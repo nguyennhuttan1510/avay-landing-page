@@ -131,7 +131,7 @@ const question = [
   }
 ]
 
-const Footer = () => {
+const Footer = ({openModalInfo, setOpenModalInfo}) => {
   const [activeCollapse, setActiveCollapse] = useState('');
   const [modal, setModal] = useState(false);
   const toggleModal = () => setModal(!modal);
@@ -155,7 +155,7 @@ const Footer = () => {
 Trụ sở: Tầng 8, Toà nhà Havana, 132 Hàm Nghi, phường Bến Thành, Quận 1, HCM, Việt Nam
       </div>
       <div className={styles.menuFooter}>
-        <div className={styles.menu_item}>
+        <div className={styles.menu_item} onClick={()=>{setOpenModalInfo(prev => !prev)}} style={{cursor: 'pointer'}}>
           <div className={styles.menu_icon}>
             <Image src="/icons/document_2.svg" alt="menu_icon" width={20} height={20} />
           </div>
@@ -173,12 +173,14 @@ Trụ sở: Tầng 8, Toà nhà Havana, 132 Hàm Nghi, phường Bến Thành, Q
           </div>
           <div><a href="tel:02871082829">Liên hệ</a></div>
         </div>
-        <div className={styles.menu_item}>
-          <div className={styles.menu_icon}>
-            <Image src="/icons/wifi_2.svg" alt="menu_icon" width={20} height={20} />
-          </div>
-          <div>Blog</div>
-        </div>
+          <a href="https://avay.vn/blog/">
+            <div className={styles.menu_item}>
+                <div className={styles.menu_icon}>
+                  <Image src="/icons/wifi_2.svg" alt="menu_icon" width={20} height={20} />
+                </div>
+                <div>Blog</div>
+            </div>
+          </a>
       </div>
       <div className={styles.copyright}>
       © 2022 Avay Company
@@ -212,6 +214,70 @@ Trụ sở: Tầng 8, Toà nhà Havana, 132 Hàm Nghi, phường Bến Thành, Q
               </Collapse>
             </>
           ))}
+        </ModalBody>
+      </Modal>
+      <Modal centered={true} isOpen={openModalInfo} toggle={()=>{setOpenModalInfo(prev => !prev)}}>
+        <ModalHeader toggle={()=>{setOpenModalInfo(prev => !prev)}}>GIỚI THIỆU</ModalHeader>
+        <ModalBody style={{height: '500px', overflowY:'auto'}} className='scroll_modal'>
+          <div><span className="font-bold">AVAY</span> là Sàn Tín dụng sạch giúp bạn tìm khoản vay có tỷ lệ phê duyệt cao nhất từ các ngân hàng và công ty tài chính như <span className="font-bold">VPBank, VIB, OCB, Lotte, Mirae Assets</span> v.v.</div>
+          <br/>
+          <div><span className="font-bold">AVAY</span> cùng các đối tác cung cấp các khoản vay với thủ tục cực đơn giản (chỉ cần CMND và số điện thoại), dựa trên công nghệ Dữ liệu Lớn độc quyền</div>
+          <br/>
+          <div><span className="font-bold">AVAY</span> là một sản phẩm của công ty Trusting Social, một công ty công nghệ tài chính hàng đầu của Việt Nam.</div>
+          <br/>
+          <div>Giải thưởng đã đạt được</div>
+          <br/>
+          <div className="flex flex-col" style={{rowGap: '2px'}}>
+            <div className="rounded flex items-center" style={{backgroundColor: '#F2F2F2', padding: '20px'}}>
+              <div className="flex-shrink-0 flex justify-center items-center" style={{width: '116px'}}>
+                <Image src="/logos/footer_info_1.png" alt="logo" width={48} height={48}/>
+              </div>
+              <div className="font-bold ">Vietnam Banking Awards 2020</div>
+            </div>
+            <div className="rounded flex items-center" style={{backgroundColor: '#F2F2F2', padding: '20px'}}>
+              <div className="flex-shrink-0 flex justify-center items-center" style={{width: '116px'}}>
+                <Image src="/logos/footer_info_4.png" alt="logo" width={73} height={73}/>
+              </div>
+              <div className="font-bold ">Winner Of The Fintech Challenge Vietnam 2019</div>
+            </div>
+            <div className="rounded flex items-center" style={{backgroundColor: '#F2F2F2', padding: '20px'}}>
+              <div className="flex-shrink-0 flex justify-center items-center" style={{width: '116px'}}>
+                <Image src="/logos/footer_info_2.png" alt="logo" width={68} height={38}/>
+              </div>
+              <div className="font-bold ">Winner Of The Innotribe Startup Showcase Asia 2015</div>
+            </div>
+            <div className="rounded flex items-center" style={{backgroundColor: '#F2F2F2', padding: '20px'}}>
+              <div className="flex-shrink-0 flex justify-center items-center" style={{width: '116px'}}>
+                <Image src="/logos/footer_info_3.png" alt="logo" width={88} height={28}/>
+              </div>
+              <div className="font-bold ">Winner Of Future Of Money And Technology Summit 2014</div>
+            </div>
+          </div>
+          {/* {question.map((item, index) => (
+            <>
+              <div className="p-3 rounded cursor-pointer flex items-center justify-between" style={{background: '#f2f2f2', marginBottom: '1px'}} onClick={()=>{toggleCollapse(index)}}>{item.title}
+                <div className="flex-shrink-0">
+                  {activeCollapse === index ? (
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="15.5" cy="15.5" r="15" fill="white" stroke="#CDCDCD"/>
+                      <rect x="10" y="14.5" width="11" height="2" fill="#04A468"/>
+                    </svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                      <circle cx="15.5" cy="15.5" r="15" fill="white" stroke="#CDCDCD"/>
+                      <rect x="10" y="14.5" width="11" height="2" fill="#04A468"/>
+                      <rect x="14.5" y="21" width="11" height="2" transform="rotate(-90 14.5 21)" fill="#04A468"/>
+                    </svg>
+                  )}
+                </div>
+              </div>
+              <Collapse isOpen={activeCollapse === index}>
+                <div className="p-3">
+                  {item.content}
+                </div>
+              </Collapse>
+            </>
+          ))} */}
         </ModalBody>
       </Modal>
       

@@ -55,6 +55,13 @@ export default function Home() {
       }
   }, []);
 
+  const handleScrollToView = (elementID) => {
+    console.log("🚀 ~ file: index.jsx:28 ~ handleScrollToView ~ elementID", elementID)
+    if(!elementID) return
+    const element = document.getElementById(elementID);
+    element.scrollIntoView({behavior: 'smooth'});
+  }
+
   const isMobile = width <= 768;
   return (
     <div className={classNames(styles.container) }>
@@ -147,22 +154,22 @@ export default function Home() {
           <div className={styles.services}>
             <Slider {...settingsCartImage}>
               <div className="card_1 px-1 sm:px-4">
-                <RegisterCardImage classNameImages='pt-[42px] h-[350px]' image={<Image src="/images/image_card_1.png" alt="card_register" width={382} height={355}/>} title='Khoản vay tốt nhất từ ngân hàng và tổ chức uy tín' sub='Cơ hội nhận ngay khoản vay siêu hời với lãi suất hấp dẫn chỉ từ 1.2%/tháng. Bạn sẽ được kết nối tới các gói vay tốt nhất đến từ những đối tác uy tín của AVAY'/>
+                <RegisterCardImage handleScrollToView={handleScrollToView} classNameImages='pt-[42px] h-[350px]' image={<Image src="/images/image_card_1.png" alt="card_register" width={382} height={355}/>} title='Khoản vay tốt nhất từ ngân hàng và tổ chức uy tín' sub='Cơ hội nhận ngay khoản vay siêu hời với lãi suất hấp dẫn chỉ từ 1.2%/tháng. Bạn sẽ được kết nối tới các gói vay tốt nhất đến từ những đối tác uy tín của AVAY'/>
               </div>
               <div className="card_2 px-1 sm:px-4">
-                <RegisterCardImage classNameImages='w-[300px] pt-0 mx-auto h-[350px]' imageRight image={<Image src="/images/image_card_2.1.png" alt="card_register" width={391} height={456}/>} title='Chỉ với số điện thoại và CMND/CCCD' sub='Chẳng ngại khó vì vay tại AVAY thật đơn giản và dễ dàng. Nhập ngay số điện thoại và CMND/CCCD để được vay không cần phải chứng minh thu nhập.'/>
+                <RegisterCardImage handleScrollToView={handleScrollToView} classNameImages='w-[300px] pt-0 mx-auto h-[350px]' imageRight image={<Image src="/images/image_card_2.1.png" alt="card_register" width={391} height={456}/>} title='Chỉ với số điện thoại và CMND/CCCD' sub='Chẳng ngại khó vì vay tại AVAY thật đơn giản và dễ dàng. Nhập ngay số điện thoại và CMND/CCCD để được vay không cần phải chứng minh thu nhập.'/>
               </div>
               <div className="card_3 px-1 sm:px-4">
-                <RegisterCardImage classNameImages='w-[335px] pt-0 mx-auto h-[350px]' image={<Image src="/images/image_card_3.png" alt="card_register" width={395} height={473}/>} title='Duyệt vay online chỉ trong 2 phút' sub='Hệ thống duyệt vay thông minh chỉ 2 phút. AVAY cam kết quy trình vay là hoàn toàn miễn phí và không thu thêm bất cứ chi phí nào. '/>
+                <RegisterCardImage handleScrollToView={handleScrollToView} classNameImages='w-[335px] pt-0 mx-auto h-[350px]' image={<Image src="/images/image_card_3.png" alt="card_register" width={395} height={473}/>} title='Duyệt vay online chỉ trong 2 phút' sub='Hệ thống duyệt vay thông minh chỉ 2 phút. AVAY cam kết quy trình vay là hoàn toàn miễn phí và không thu thêm bất cứ chi phí nào. '/>
               </div>
             </Slider>
           </div>
         ) : (
           <div className={classNames(styles.scroll, styles.service_scroll, 'lg:overflow-hidden')}>
             <div className={classNames(styles.services, styles.desktop)}>
-              <RegisterCardImage classNameImages='pt-[42px] h-[350px] lg:pt-0 lg:h-auto' image={<Image src="/images/image_card_1.png" alt="card_register" width={382} height={355}/>} title='Khoản vay tốt nhất từ ngân hàng và tổ chức uy tín' sub='Cơ hội nhận ngay khoản vay siêu hời với lãi suất hấp dẫn chỉ từ 1.2%/tháng. Bạn sẽ được kết nối tới các gói vay tốt nhất đến từ những đối tác uy tín của AVAY'/>
-              <RegisterCardImage classNameImages='w-[300px] pt-0 mx-auto h-[350px] lg:w-auto lg:pt-0 lg:h-auto lg:mx-0' imageRight image={<Image src="/images/image_card_2.4.png" alt="card_register" width={328} height={382}/>} title='Chỉ với số điện thoại và CMND/CCCD' sub='Chẳng ngại khó vì vay tại AVAY thật đơn giản và dễ dàng. Nhập ngay số điện thoại và CMND/CCCD để được vay không cần phải chứng minh thu nhập.'/>
-              <RegisterCardImage classNameImages='w-[335px] pt-0 mx-auto h-[350px] lg:w-auto lg:pt-0 lg:h-auto lg:mx-0' image={<Image src="/images/image_card_3.png" alt="card_register" width={395} height={100}/>} title='Duyệt vay online chỉ trong 2 phút' sub='Hệ thống duyệt vay thông minh chỉ 2 phút. AVAY cam kết quy trình vay là hoàn toàn miễn phí và không thu thêm bất cứ chi phí nào. '/>
+              <RegisterCardImage handleScrollToView={handleScrollToView} classNameImages='pt-[42px] h-[350px] lg:pt-0 lg:h-auto' image={<Image src="/images/image_card_1.png" alt="card_register" width={382} height={355}/>} title='Khoản vay tốt nhất từ ngân hàng và tổ chức uy tín' sub='Cơ hội nhận ngay khoản vay siêu hời với lãi suất hấp dẫn chỉ từ 1.2%/tháng. Bạn sẽ được kết nối tới các gói vay tốt nhất đến từ những đối tác uy tín của AVAY'/>
+              <RegisterCardImage handleScrollToView={handleScrollToView} classNameImages='w-[300px] pt-0 mx-auto h-[350px] lg:w-auto lg:pt-0 lg:h-auto lg:mx-0' imageRight image={<Image src="/images/image_card_2.4.png" alt="card_register" width={328} height={382}/>} title='Chỉ với số điện thoại và CMND/CCCD' sub='Chẳng ngại khó vì vay tại AVAY thật đơn giản và dễ dàng. Nhập ngay số điện thoại và CMND/CCCD để được vay không cần phải chứng minh thu nhập.'/>
+              <RegisterCardImage handleScrollToView={handleScrollToView} classNameImages='w-[335px] pt-0 mx-auto h-[350px] lg:w-auto lg:pt-0 lg:h-auto lg:mx-0' image={<Image src="/images/image_card_3.png" alt="card_register" width={395} height={100}/>} title='Duyệt vay online chỉ trong 2 phút' sub='Hệ thống duyệt vay thông minh chỉ 2 phút. AVAY cam kết quy trình vay là hoàn toàn miễn phí và không thu thêm bất cứ chi phí nào. '/>
             </div>
           </div>
         )}
@@ -206,7 +213,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.wrap_button_process}>
-          <BaseButton className={classNames('shadow shadow--success lg:max-w-full lg:mx-auto lg:h-20 h-[58px]', styles.button)}>Đăng ký ngay</BaseButton>
+          <BaseButton className={classNames('shadow shadow--success lg:max-w-full lg:mx-auto lg:h-20 h-[58px]', styles.button)} onClick={()=>{handleScrollToView('form_register')}}>Đăng ký ngay</BaseButton>
         </div>
       </div>
 

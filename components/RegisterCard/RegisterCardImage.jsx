@@ -4,7 +4,7 @@ import React from 'react';
 import BaseButton from "../Button";
 import styles from './styles.module.scss'
 const RegisterCardImage = (props) => {
-  const {imageRight=false, title, sub, image, classNameImages, classNameRoot} = props
+  const {imageRight=false, title, sub, image, classNameImages, classNameRoot, handleScrollToView} = props
   return (
       <div className={classNames(styles.register_card_image, classNameRoot,'h-[751px] lg:h-auto')}>
       <div className={classNames(classNameImages,{[styles.image_right]: imageRight} )}>
@@ -20,7 +20,7 @@ const RegisterCardImage = (props) => {
           <div>
             <Image src="/icons/icon_back.svg" alt="back" width={28} height={24} />
           </div>
-          <BaseButton className='button__underline underline--success'>Đăng ký</BaseButton> 
+          <BaseButton className='button__underline underline--success' onClick={()=>{handleScrollToView('form_register')}}>Đăng ký</BaseButton> 
         </div>
       </div>
     </div>

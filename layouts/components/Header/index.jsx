@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Slider from "react-slick";
 import BaseButton from "../../../components/Button";
 import styles from './styles.module.scss'
-const Header = () => {
+const Header = ({setOpenModalInfo}) => {
   const [openMenuMobile, setOpenMenuMobile] = useState(false)
   const handleOpenMenuMobile = () => {
     setOpenMenuMobile(prev => !prev)
@@ -44,9 +44,13 @@ const Header = () => {
       </div>
       <div className={styles.rightSite}>
         <div className={styles.menu}>
-          <div className={styles.menu_item} onClick={()=>{handleScrollToView('about_element')}}>Về Avay</div>
+          <div className={styles.menu_item} onClick={()=>{setOpenModalInfo(prev => !prev)}}>Về Avay</div>
           <div className={styles.menu_item} onClick={()=>{handleScrollToView('process_element')}}>Quy trình</div>
-          <div className={styles.menu_item}>Blog</div>
+          <div className={styles.menu_item}>
+            <a href="https://avay.vn/blog/">
+              Blog
+            </a>
+          </div>
         </div>
         <div className={styles.action}>
           <div className={styles.contact}>
@@ -65,7 +69,10 @@ const Header = () => {
       <div className={classNames(styles.menu, {[styles.showMenu]: openMenuMobile})}>
         <div className={styles.item} onClick={()=>{handleScrollToView('about_element')}}>Về Avay</div>
         <div className={styles.item} onClick={()=>{handleScrollToView('process_element')}}>Quy trình</div>
-        <div className={styles.item}>Blog</div>
+        <div className={styles.item}>
+          <a href="https://avay.vn/blog/">
+            Blog
+          </a></div>
         <div className={classNames(styles.contact, styles.contact_mobile)}>
           <div>
             <Image src='/icons/call_icon.svg' alt='call_icon' width={16} height={16} />
@@ -85,7 +92,7 @@ const Header = () => {
             <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
             <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
           </div>
-          <div className={classNames(styles.images, 'order-first xl:order-last')}>
+          <div className={classNames(styles.images)}>
             <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
           </div>
         </div>
@@ -96,7 +103,7 @@ const Header = () => {
             <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
             <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
           </div>
-          <div className={classNames(styles.images, 'order-first xl:order-last')}>
+          <div className={classNames(styles.images)}>
             <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
           </div>
         </div>
@@ -107,7 +114,7 @@ const Header = () => {
             <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
             <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
           </div>
-          <div className={classNames(styles.images, 'order-first xl:order-last')}>
+          <div className={classNames(styles.images)}>
             <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
           </div>
         </div>
@@ -118,7 +125,7 @@ const Header = () => {
             <div className={styles.title}>Vay tín chấp chỉ với <span className={styles.title_highline}>Sim Viettel</span></div>
             <div className={styles.sub}>Ưu tiên sử dụng sim Viettel chính chủ có tỷ lệ duyệt cao đến 79% và hạn mức vay cao hơn.</div>
           </div>
-          <div className={classNames(styles.images, 'order-first xl:order-last')}>
+          <div className={classNames(styles.images)}>
             <Image src='/images/banner.png' alt="banner" width={472} height={375}/>
           </div>
         </div>

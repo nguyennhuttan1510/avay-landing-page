@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 const MainLayout = ({children}) => {
+  const [ openModalInfo, setOpenModalInfo ] = useState(false)
   return (
     <div>
-      <Header/>
+      <Header setOpenModalInfo={setOpenModalInfo}/>
         {children}
-      <Footer/>
+      <Footer openModalInfo={openModalInfo} setOpenModalInfo={setOpenModalInfo}/>
     </div>
   );
 };
