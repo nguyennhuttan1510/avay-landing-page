@@ -15,8 +15,8 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 * {
@@ -66,4 +66,19 @@ input{
     height: 42px;
     display: block !important;
   }
+}
+
+/* width */
+.scroll_modal::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+.scroll_modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.scroll_modal::-webkit-scrollbar-thumb {
+  background: #888;
 }

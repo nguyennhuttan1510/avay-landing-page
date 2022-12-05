@@ -60,7 +60,7 @@ export default function Home() {
     <div className={classNames(styles.container) }>
       <div className={classNames(styles.wrap_sections, 'container mx-auto')}>
         
-      <div className={classNames(styles.wrap_card)}>
+      <div id="form_register" className={classNames(styles.wrap_card)}>
         <RegisterCard/>
       </div>
 
@@ -168,7 +168,7 @@ export default function Home() {
         )}
       </div>
 
-      <div className={styles.wrap_process}>
+      <div id="process_element" className={styles.wrap_process}>
         <div className={styles.back_effect_process_1}></div>
         <div className={styles.back_effect_process_2}></div>
         <div style={{marginBottom:'80px'}} className={classNames(styles.section_title, styles.section_title_process)}>
@@ -210,24 +210,47 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.wrap_about}>
+      <div id='about_element' className={styles.wrap_about}>
         <div className={styles.title_section_about}>Nói về AVAY</div>
-          <div className={styles.list_logo}>
-            <div className={styles.logo_item}>
-              <Image src="/logos/quoc_gia.png" alt='quoc_gia' width={234} height={81} />
+        <div className="w-full mx-auto">
+          <Slider {...settings}>
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                  <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                    {/* <Image className='lg:mx-auto' src="/logos/vib.png" alt='vib' width={135} height={65} /> */}
+                    <Image src="/logos/quoc_gia.png" alt='quoc_gia' width={234} height={81} />
+                  </div>
+                  <div className={styles.divide}></div>
+              </div>
             </div>
-            <span className={styles.divide}></span>
-            <div className={styles.logo_item}>
-              <Image src="/logos/tiepthi.png" alt='tiepthi' width={200} height={78} />
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  {/* <Image className='lg:mx-auto' src="/logos/vpb.png" alt='vpb' width={238} height={54} /> */}
+                  <Image src="/logos/tiepthi.png" alt='tiepthi' width={200} height={78} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
             </div>
-            <span className={styles.divide}></span>
-            <div className={styles.logo_item}>
-              <Image src="/logos/cafe_biz.png" alt='cafebiz' width={191} height={56} />
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  {/* <Image className='lg:mx-auto' src="/logos/fe.png" alt='fe' width={299} height={31} /> */}
+                  <Image src="/logos/cafe_biz.png" alt='cafebiz' width={191} height={56} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
             </div>
-            <span className={styles.divide}></span>
-            <div className={styles.logo_item}>
-              <Image src="/logos/vietnam_net.png" alt='vietnam_net' width={168} height={86} />
+            <div className="h-16 lg:h-24">
+              <div className='flex justify-center items-center flex-row h-full gap-x-'>
+                <div className={classNames(styles.item, 'w-44 lg:w-fit lg:mx-auto px-[40px]')}>
+                  {/* <Image className='lg:mx-auto' src="/logos/mafc.png" alt='mafc' width={239} height={86} /> */}
+                  <Image src="/logos/vietnam_net.png" alt='vietnam_net' width={168} height={86} />
+                </div>
+                <div className={styles.divide}></div>
+              </div>
             </div>
+          </Slider>
           </div>
       </div>
       </div>

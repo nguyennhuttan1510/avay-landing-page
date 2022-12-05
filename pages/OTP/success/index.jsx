@@ -16,7 +16,7 @@ const SuccessOTP = () => {
       </div>
       <div className={classNames(styles.title, styles.success)}>Chúc mừng!</div>
       <div className={styles.content}>
-Bạn đã thỏa điều kiện nhận khoản<br/> vay tại <span style={{fontWeight: '700'}}>Fe Credit</span><br/><br/>
+Bạn đã thỏa điều kiện nhận khoản<br/> vay tại <span style={{fontWeight: '700'}}>Avay</span><br/><br/>
 
 Vui lòng đợi nhân viên xác nhận và lên hồ sơ vay trong 24h tới!
       </div>
