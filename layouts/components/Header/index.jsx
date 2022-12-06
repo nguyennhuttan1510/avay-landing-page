@@ -67,7 +67,7 @@ const Header = ({setOpenModalInfo}) => {
     <div className={styles.menu_mobile} >
       <div><Image src='/logos/logo.png' alt='logo' width={93} height={28}/></div><div style={{cursor: 'pointer'}} onClick={handleOpenMenuMobile}><Image src='/icons/menu_icon.svg' alt="icon_back" width={24} height={24}/></div>
       <div className={classNames(styles.menu, {[styles.showMenu]: openMenuMobile})}>
-        <div className={styles.item} onClick={()=>{handleScrollToView('about_element')}}>Về Avay</div>
+        <div className={styles.item} onClick={()=>{setOpenModalInfo(prev => !prev)}}>Về Avay</div>
         <div className={styles.item} onClick={()=>{handleScrollToView('process_element')}}>Quy trình</div>
         <div className={styles.item}>
           <a href="https://avay.vn/blog/">
